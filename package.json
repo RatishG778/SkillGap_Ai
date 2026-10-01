@@ -1,0 +1,14 @@
+{
+  "name": "careeros-ai",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev -- --host 0.0.0.0 --port 5173",
+    "dev:backend": "cd backend && .\\.venv\\Scripts\\Activate.ps1; uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "build": "npm --prefix frontend run build",
+    "preview:frontend": "npm --prefix frontend run preview -- --host 0.0.0.0 --port 4173",
+    "start:backend": "cd backend && .\\.venv\\Scripts\\Activate.ps1; uvicorn app.main:app --host 0.0.0.0 --port 8000",
+    "install:frontend": "npm --prefix frontend install",
+    "install:backend": "cd backend && python -m venv .venv && .\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt"
+  }
+}
